@@ -1,5 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import {createMap} from './modules/map.js';
 
 // ---------------------------------
 
@@ -10,37 +10,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
+
+  const siteList = document.querySelector('.main-nav__list--header');
+  const button = document.querySelector('.main-nav__toggle');
+  const header = document.querySelector('.main-header');
+  const logoIcon = document.querySelector('.logo-link__icon--header');
+
+  button.addEventListener('click', () => {
+    if (button.classList.contains('main-nav__toggle--closed')) {
+      button.classList.remove('main-nav__toggle--closed');
+      button.classList.add('main-nav__toggle--opened');
+      siteList.style.display = 'none';
+      header.style.background = 'transparent';
+      logoIcon.style.fill = '#f9fbfd';
+    } else {
+      button.classList.remove('main-nav__toggle--opened');
+      button.classList.add('main-nav__toggle--closed');
+      siteList.style.display = 'block';
+      header.style.background = '#f9fbfd';
+      logoIcon.style.fill = '#011c40';
+    }
+  });
+
+
+
   // Modules
   // ---------------------------------
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    createMap();
   });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

@@ -1,0 +1,25 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 103px 10px;
+}
+
+@media (max-width: $vp-1023) {
+  .main-header {
+    padding: 17px 45px 10px;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .main-header {
+    display: block;
+    margin: 0;
+    padding: 20px 40px 20px 15px;
+  }
+}

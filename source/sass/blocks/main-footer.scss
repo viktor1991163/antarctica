@@ -1,0 +1,33 @@
+.main-footer {
+  background-color: $color-tangaroa;
+  padding: 46px 0;
+}
+
+.main-footer__wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 70px auto max-content;
+  gap: 5px;
+}
+
+@media (max-width: $vp-1023) {
+  .main-footer {
+    padding: 35px 0 40px;
+  }
+
+  .main-footer__wrapper {
+    grid-template-columns: 5% 78% 17%;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .main-footer {
+    padding: 40px 0;
+  }
+
+  .main-footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,82 @@
+.promo {
+  min-height: 650px;
+  background-color: $color-solitude;
+  background-image: image-set(
+    url("../img/desktop/promo-background.webp") 1x,
+    url("../img/desktop/promo-background@2x.webp") 2x,
+    url("../img/desktop/promo-background.jpg") 1x,
+    url("../img/desktop/promo-background@2x.jpg") 2x,
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 270px 0 287px 95px;
+
+  & h1 {
+    font-size: 54px;
+    line-height: 65.83px;
+    font-weight: 700;
+    color: $color-alice-blue;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 0;
+  }
+
+  & p {
+    font-size: 20px;
+    line-height: 24.38px;
+    color: $color-alice-blue;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 11px 0 0;
+  }
+}
+
+@media (max-width: $vp-1023) {
+  .promo {
+    min-height: 638px;
+    background-image: image-set(
+    url("../img/tablet/promo-background.webp") 1x,
+    url("../img/tablet/promo-background@2x.webp") 2x,
+    url("../img/tablet/promo-background.jpg") 1x,
+    url("../img/tablet/promo-background@2x.jpg") 2x,
+  );
+    padding: 267px 0 150px;
+    filter: none;
+
+    & h1 {
+      font-size: 50px;
+      line-height: 60.95px;
+      filter: none;
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 21.94px;
+      filter: none;
+    }
+  }
+}
+
+@media (max-width: $vp-767) {
+  .promo {
+    min-height: 500px;
+    background-image: image-set(
+    url("../img/mobile/promo-background.webp") 1x,
+    url("../img/mobile/promo-background@2x.webp") 2x,
+    url("../img/mobile/promo-background.jpg") 1x,
+    url("../img/mobile/promo-background@2x.jpg") 2x,
+  );
+    padding: 175px 0 90px 0;
+
+    & h1 {
+      font-size: 36px;
+      line-height: 45px;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 22.4px;
+      margin: 10px 0 0;
+    }
+  }
+}

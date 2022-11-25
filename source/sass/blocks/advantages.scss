@@ -1,0 +1,123 @@
+.advantages {
+  padding: 110px 0;
+  position: relative;
+  background-color: $color-solitude;
+  z-index: -2;
+
+  & h2 {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 50px 0 11px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-alice-blue;
+  padding: 30px 30px 36px;
+
+  & h3 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  & p {
+    font-size: 14px;
+    line-height: 19.6px;
+    margin: 9px 0;
+  }
+}
+
+.advantages__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: $vp-1023) {
+  .advantages {
+    padding: 90px 0;
+
+    & h2 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+  }
+
+  .advantages__list {
+    gap: 30px;
+    padding: 50px 0 9px;
+  }
+
+  .advantages__item {
+    padding: 26px 15px 15px 20px;
+
+    & h3 {
+      line-height: 25.2px;
+    }
+  }
+
+  .advantages__icon {
+    height: 26px;
+
+    &--cruise-ship {
+      width: 21px;
+    }
+
+    &--all-inclusive {
+      width: 27px;
+    }
+
+    &--zodiac {
+      width: 36px;
+    }
+  }
+}
+
+@media (max-width: $vp-767) {
+  .advantages {
+    padding: 55px 0 65px;
+
+    & h2 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  .advantages__list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 31px 0 0;
+  }
+
+  .advantages__item {
+    padding: 26px 15px 13px 20px;
+
+    & h3 {
+      line-height: 25.2px;
+      padding-right: 70px;
+    }
+  }
+}
