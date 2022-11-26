@@ -581,6 +581,24 @@ button,
   clip-path: inset(100%);
 }
 
+.overlay {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgba(0, 43, 102, 0.5);
+  z-index: 1;
+}
+
+.overlay--active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .container {
   max-width: 1366px;
   margin: 0 auto;
@@ -646,15 +664,6 @@ button,
   display: none;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
 .main-header {
   position: absolute;
   top: 0;
@@ -671,6 +680,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding: 31px 103px 10px;
+  z-index: 2;
 }
 
 .main-container {
@@ -869,7 +879,7 @@ button,
 
 .cruises__info-list {
   margin: 0;
-  padding: 29px 25px 37px;
+  padding: 29px 25px 30px;
   list-style-type: none;
   background-color: #011c40;
   position: absolute;
@@ -1405,7 +1415,7 @@ button,
   }
 
   .cruises__info-list {
-    padding: 29px 35px 37px;
+    padding: 29px 35px 30px;
   }
 
   .booking {
@@ -1590,6 +1600,10 @@ button,
     box-shadow: 0 6px 0 0 #f9fbfd, 0 12px 0 0 #f9fbfd;
   }
 
+  .main-nav__toggle--closed {
+    right: 40px;
+  }
+
   .main-nav__toggle--closed::before {
     content: "";
     position: absolute;
@@ -1620,6 +1634,14 @@ button,
     display: block;
     margin: 0;
     padding: 20px 40px 20px 15px;
+  }
+
+  .main-header--opened {
+    overflow: hidden;
+    min-width: 295px;
+    min-height: 568px;
+    margin-left: 30px;
+    background-color: #f9fbfd;
   }
 
   .promo {

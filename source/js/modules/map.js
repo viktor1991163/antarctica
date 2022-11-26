@@ -1,4 +1,4 @@
-const createMap = () => {
+const initMap = () => {
   if (window.ymaps) {
     const ymaps = window.ymaps;
     ymaps.ready(() => {
@@ -31,4 +31,4 @@ const createMap = () => {
   }
 };
 
-export {createMap};
+export {initMap};

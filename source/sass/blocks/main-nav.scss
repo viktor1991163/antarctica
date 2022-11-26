@@ -110,6 +110,8 @@
     }
 
     &--closed {
+      right: 40px;
+
       &::before {
         content: "";
         position: absolute;
