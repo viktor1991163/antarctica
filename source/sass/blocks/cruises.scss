@@ -21,52 +21,53 @@
   padding: 0 15px;
   list-style-type: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
   width: 100%;
 }
 
 .cruises__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: $color-tangaroa;
   min-height: 386px;
+  padding: 29px 30px 23px;
 
   & h3 {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 500;
     color: $color-alice-blue;
-    margin: 0;
-    position: absolute;
     z-index: 2;
     bottom: 23px;
     left: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: auto;
+  }
+
+  & a {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    background-color: $color-alice-blue;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 18px;
+    display: none;
   }
 }
 
 .cruises__info-list {
   margin: 0;
-  padding: 29px 25px 30px;
   list-style-type: none;
-  background-color: $color-tangaroa;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 230px;
   overflow: auto;
-
-  & h4 {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 500;
-    color: $color-alice-blue;
-    margin: 0 0 13px;
-  }
 
   & ul {
     padding: 0;
@@ -92,16 +93,6 @@
     color: $color-quartz;
     margin: 0;
   }
-
-  & a {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 600;
-    background-color: $color-alice-blue;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 13px;
-  }
 }
 
 .cruises__info-image img {
@@ -112,6 +103,23 @@
   height: 100%;
   z-index: 1;
   object-fit: cover;
+}
+
+.cruises__item:hover {
+  padding: 29px 25px 30px;
+
+  .cruises__info-image {
+    display: none;
+  }
+
+  & h3 {
+    margin: 0;
+    margin-bottom: auto;
+  }
+
+  & a {
+    display: block;
+  }
 }
 
 .cruises__item:hover .cruises__info-list {
@@ -128,19 +136,12 @@
     }
   }
 
-  .cruises__list {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .cruises__item {
-    & h3 {
-      bottom: 27px;
-      left: 35px;
-    }
+    padding: 29px 35px 28px;
   }
 
-  .cruises__info-list {
-    padding: 29px 35px 30px;
+  .cruises__item:hover {
+    padding: 29px 35px 28px;
   }
 }
 
@@ -156,18 +157,14 @@
   }
 
   .cruises__list {
-    grid-template-columns: 1fr;
     padding: 0 10px;
   }
 
   .cruises__item {
-    & h3 {
-      bottom: 18px;
-      left: 25px;
-    }
+    padding: 29px 25px 18px;
   }
 
-  .cruises__info-list {
-    padding: 28px 25px 35px;
+  .cruises__item:hover {
+    padding: 29px 25px 28px;
   }
 }
