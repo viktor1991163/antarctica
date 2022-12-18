@@ -21,14 +21,14 @@
   justify-content: center;
   align-self: center;
   padding: 10px;
-}
-
-.social__icon {
-  fill: $color-alice-blue;
 
   &:hover {
     opacity: 70%;
   }
+}
+
+.social__icon {
+  fill: $color-alice-blue;
 }
 
 @media (max-width: $vp-1023) {

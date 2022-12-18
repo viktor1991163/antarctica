@@ -5,10 +5,6 @@
 
 .logo-link__icon {
   fill: $color-alice-blue;
-
-  &:hover {
-    opacity: 70%;
-  }
 }
 
 @media (max-width: $vp-1023) {
@@ -20,13 +16,12 @@
 }
 
 @media (max-width: $vp-767) {
-  .logo-link,
-  .logo-link__icon {
+  .logo-link {
     width: 42px;
     height: 22px;
+  }
 
-    &--header {
-      fill: #f9fbfd;
-    }
+  .logo-link__icon {
+    fill: $color-alice-blue;
   }
 }

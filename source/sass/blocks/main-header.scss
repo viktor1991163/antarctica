@@ -25,10 +25,34 @@
     transition: all 0.9s ease;
   }
 
+  .main-header--no-js {
+    position: static;
+  }
+
+  .main-header--no-js .main-nav__list--header {
+    display: block;
+  }
+
+  .main-header--no-js .logo-link__icon {
+    fill: $color-tangaroa;
+  }
+
+  .main-header--no-js .main-nav__toggle--opened {
+    &::before {
+      background-color: $color-tangaroa;
+      box-shadow: 0 6px 0 0 $color-tangaroa, 0 12px 0 0 $color-tangaroa;
+    }
+  }
+
+  .main-header__nav {
+    margin-top: 37px;
+    overflow: auto;
+  }
+
   .main-header--opened {
     min-width: 295px;
-    min-height: 568px;
-    margin-left: 30px;
+    height: 100%;
+    margin-left: 35px;
     background-color: $color-alice-blue;
     z-index: 5;
   }
