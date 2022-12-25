@@ -35,15 +35,16 @@
 .form__agreement {
   align-self: flex-start;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
 
   & label {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
     font-size: 10px;
     line-height: 13px;
     color: $color-alice-blue;
     cursor: pointer;
+    position: relative;
+    padding-left: 25px;
 
     &:hover {
       opacity: 70%;
@@ -51,15 +52,21 @@
   }
 
   & span {
+    display: inline-block;
     width: 18px;
     height: 18px;
     background-color: $color-alice-blue;
-    margin-right: 5px;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  & input[type="checkbox"]:checked + span {
+  & input {
+    margin: 0;
+  }
+
+  & input[type="checkbox"]:checked + label span {
     &::before {
       content: "";
       position: absolute;

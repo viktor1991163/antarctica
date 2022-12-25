@@ -18,7 +18,7 @@
     <header class="main-header main-header--no-js container">
 
         <div class="logo-link" href="#">
-          <svg class="logo-link__icon" width="70" height="38">
+          <svg class="logo-link__icon logo-link__icon--header" width="70" height="38">
             <use xlink:href="img/sprite.svg#mountains-logo"></use>
           </svg>
         </div>
@@ -384,18 +384,20 @@
                   <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
 
                   <label class="visually-hidden" for="name">Имя</label>
-                  <input type="text" id="name" name="name" placeholder="Имя" pattern="^[A-zА-яЁё]+$" title="только буквы" required>
+                  <input type="text" id="name" name="name" placeholder="Имя" pattern="^[A-zА-яЁё\-\s]+$" title="только буквы" required>
                   <label class="visually-hidden" for="phone">Номер телефона</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9'+''('')']+$" title="только цифры" required>
+                  <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9\+\(\)\-]+$" title="только цифры" required>
                   <label class="visually-hidden" for="mail">Имя</label>
                   <input type="email" id="mail" name="mail" placeholder="Email" title="Валерия" required>
 
                   <div class="form__agreement">
+                    <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required checked>
                     <label for="agreement">Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных
-                      <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required checked>
                       <span class="form__checkbox"></span>
                     </label>
                   </div>
+
+
                   <button class="form__button btn" type="submit">Оставить заявку</button>
               </form>
 
@@ -428,7 +430,7 @@
                   <svg class="contacts__icon" width="18" height="18">
                     <use xlink:href="img/sprite.svg#phone"></use>
                   </svg>
-                  <a class="contacts__link" href="tel:88002000000">8-800-200-00-00</a>
+                  <div><a class="contacts__link" href="tel:88002000000">8-800-200-00-00</a></div>
                 </li>
               </ul>
             </div>
